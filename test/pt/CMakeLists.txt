@@ -1,2 +1,3 @@
 add_executable(sched_test sched_test.cpp)
-target_link_libraries(sched_test PRIVATE Catch2WithMain nanobench asyncio)
+find_package(Catch2 CONFIG REQUIRED)
+target_link_libraries(sched_test PRIVATE Catch2::Catch2WithMain nanobench::nanobench asyncio)

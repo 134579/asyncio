@@ -22,7 +22,7 @@ SCENARIO("lots of synchronous completions") {
         REQUIRE(sum == 1'000'000);
     };
 
-    ankerl::nanobench::Bench().epochs(20).run("lots of synchronous completions ", [&] {
+    ankerl::nanobench::Bench().epochs(3).run("lots of synchronous completions ", [&] {
         asyncio::run(main());
     });
 }

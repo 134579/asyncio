@@ -48,7 +48,7 @@ SCENARIO("test Counted") {
 }
 
 SCENARIO("test result T") {
-    using TestCounted = Counted<{
+    using TestCounted = Counted<CountedPolicy{
         .move_assignable=false,
         .copy_assignable=false
     }>;
@@ -187,7 +187,7 @@ SCENARIO("test Counted for Task") {
 
 
 SCENARIO("test pass parameters to the coroutine frame") {
-    using TestCounted = Counted<{
+    using TestCounted = Counted<CountedPolicy{
         .move_assignable=false,
         .copy_assignable=false
     }>;

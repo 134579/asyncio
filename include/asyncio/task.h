@@ -8,6 +8,7 @@
 #include <asyncio/event_loop.h>
 #include <asyncio/result.h>
 #include <asyncio/concept/promise.h>
+#include <asyncio/concept/future.h>
 #include <coroutine>
 #include <cassert>
 #include <variant>
